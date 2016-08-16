@@ -1,4 +1,5 @@
 import observable = require("data/observable");
+import {Idk} from "nativescript-idk";
 
 export class HelloWorldModel extends observable.Observable {
 
