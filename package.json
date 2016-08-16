@@ -1,45 +1,45 @@
 {
-  "name": "tns-template-plugin",
-  "version": "1.0.9",
-  "description": "A NativeScript plugin generator seed",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nathanaela/tns-template-plugin.git"
-  },
-  "keywords": [
-    "NativeScript", "plugin", "generator", "seed", "template"
-  ],
-  "author": {
-    "name": "Nathanael Anderson",
-    "email": "nathan@master-technology.com"
-  },
-  "contributors": [
-    {
-      "name": "Alexander Ziskind",
-      "email": "alex@nuvious.com",
-      "url": "https://github.com/alexziskind1"
+    "name": "nativescript-idk",
+    "version": "1.0.0",
+    "description": "idk wut it does",
+    "main": "idk.js",
+    "typings": "index.d.ts",
+    "nativescript": {
+        "platforms": {
+            "android": "2.0.0",
+            "ios": "2.0.0"
+        }
     },
-    {
-      "name": "TJ VanToll",
-      "email": "tj.vantoll@gmail.com",
-      "url": "https://github.com/tjvantoll"
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/roblav96/nativescript-idk.git"
+    },
+    "keywords": [
+        "NativeScript",
+        "idk"
+    ],
+    "author": {
+        "name": "Rob Laverty",
+        "email": "roblav96@gmx.com"
+    },
+    "license": {
+        "type": "MIT",
+        "url": "https://github.com/roblav96/nativescript-idk/blob/master/LICENSE"
+    },
+    "bugs": {
+        "url": "https://github.com/roblav96/nativescript-idk/issues"
+    },
+    "homepage": "https://github.com/roblav96/nativescript-idk",
+    "readmeFilename": "README.md",
+    "scripts": {
+        "build": "tsc",
+        "demo.ios": "npm run preparedemo && cd demo && tns emulate ios",
+        "demo.android": "npm run preparedemo && cd demo && tns run android",
+        "debug.ios": "npm run preparedemo && cd demo && tns debug ios --emulator",
+        "debug.android": "npm run preparedemo && cd demo && tns debug android --emulator",
+        "preparedemo": "npm run build && cd demo && tns plugin remove nativescript-idk && tns plugin add .. && tns install",
+        "setup": "cd demo && npm install && cd .. && npm run build && cd demo && tns plugin add .. && cd ..",
+        "prepublish": "tsc",
+        "start": "npm run demo.ios"
     }
-  ],
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/nathanaela/tns-template-plugin/blob/master/LICENSE"
-  },
-  "bugs": {
-    "url": "https://github.com/tns-template-plugin/issues"
-  },
-  "homepage": "https://github.com/tns-template-plugin",
-  "readmeFilename": "README.md",
-  "scripts": {
-    "setup-plugin": "node setup.js",
-    "setupplugin": "node setup.js",
-    "postinstall": "node setup.js",
-    "start": "node setup.js"
-  }
-
 }
